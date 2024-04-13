@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+       
+        #img1{
+            width: 100%;
+            height: 500px;
+        }
+        #logo1{
+            position: absolute;
+           
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            left: 11%;
+        }
+        #navdiv span{
+            position: relative;
+            top: 8px;
+      padding-left: 10px;
+        }
+        #div1{
+            background-color: rgba(0, 0, 128, 0.616);
+            height: 50px;
+        }
+        #div01 span{
+            color: whitesmoke;
+            padding-top: 5px;
+           padding-left:15px;
+           
+
+        }
+        #div01{
+            display: flex;
+            justify-content:flex-end;
+          
+            width:100%;
+        }
+        #navdiv{
+            z-index: 1;
+           background-color: white;
+           position: absolute;
+           top: 6.4%;
+           left: 5%;
+           height: 80px;
+           border-radius: 15px;
+           width: 90%;
+        }
+        #nuz{
+            z-index: 1;
+            position: absolute;
+            top: 12.7%;
+            left: 7.7%;
+            letter-spacing: 4px;
+        }
+        #spans{
+            z-index: 1;
+            position: absolute;
+            right: 10%;
+           
+        }
+      #spans span{
+           background-color:  rgba(0, 0, 128, 0.616);
+          border-radius: 7px;
+          padding: 7px 7px 7px 7px;
+          margin-right: 3px;
+          transition: transform 0.3s ease;
+        }
+        
+        #spans  span:hover{
+           background-color: grey;
+         color: rgba(0,0,128,0.616);
+         
+        }
+       #user{
+        z-index: 1;
+        position: relative;
+        left: 1210px;
+        top:-14px;
+       }
+       #user1{
+        z-index: 1;
+        position: relative;
+        right: -4px;
+        top: -5px;
+       }
+       #backk{
+        z-index: 1;
+        width: 50px;
+        height: 90px;
+        background-color: white;
+        opacity: 0.3;
+        position: relative;
+        right: 1000px;
+        top: 63px;
+       }
+       #nextt{
+        z-index: 1;
+        width: 50px;
+        height: 90px;
+        background-color: white;
+        opacity: 0.4;
+        position: relative;
+        right: 100px;
+        top: 150px;
+       }
+       #nextt:hover{
+        cursor: pointer;
+       }
+       #backk:hover{
+        cursor:pointer;
+       }
+       #div01 img{
+        width: 20px;height: 20px;
+       }
+       #footerr{
+       
+        background-image: url("https://thumbs.dreamstime.com/b/striped-seamless-simple-pattern-diagonal-lines-repeatable-background-endless-gray-linear-texture-191888420.jpg");
+      
+       
+        width: 1000px;
+        position: absolute;
+        left: -18%;
+       padding-left: 400px;
+       }
+      
+      #imagess{
+        position: absolute;
+        left: -70%;
+        top:250%
+      }
+       #imagess .imgs img{
+      
+       float: left; 
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        padding-right:3px;
+        border-radius: 10px;
+        border-color: 5px solid rgb(16, 16, 54);
+        overflow: hidden;
+      
+       }
+       #imagess .imgs{
+        animation: slideRight 30s linear  infinite;
+        width:100%;
+        height:210px;
+        background-color: skyblue;
+        border-radius: 20px;
+        box-shadow: 2px 4px 3px grey;
+       }
+       @keyframes slideRight{
+        0%{
+            transform: translateX(25%);
+        }
+        100%{
+            transform: translateX(-25%);
+        }
+       }
+      #imagehead {
+        animation: slideRight 30s linear  infinite;
+      }
+      #imagess .imgs h4{
+        font-size: 28px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        color:rgb(248, 217, 217);
+      }
+      #imagess .imgs h5{
+        font-size: 16px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding-left: 210px;
+       
+        
+      }
+       #welcomee{
+        position: absolute;
+        right:1000px;
+       top: 190%;
+       width: 1000px;
+       }
+       a{
+        text-decoration: none;
+        color: black;
+       }
+       #announcements{
+       border: 2px solid black;
+       background-color:azure;
+       width: 500px;
+       height: 400px;
+       text-align: center;
+       
+       }
+      th{
+        border-bottom: 2px solid black;
+      }
+       #tablee{
+        float: left;
+        position: absolute;
+        left: -200px;
+        top:105%;
+       }
+       #news{
+        width: 500px;
+        height: 400px;
+        border: 2px solid black;
+        position: absolute;
+        left: 750px;
+        top:0%;
+        background-color:azure;
+        
+       }
+        </style>
+</head>
+<body>
+    <div>
+    <nav>
+      <div>
+        <div id="div1"><div id="div01">
+            <span><img src="https://www.freeiconspng.com/uploads/search-icon-png-21.png"><input type="text" style="background-color:black" placeholder="search here"></span>
+            <span><img src="https://www.freepnglogos.com/uploads/linkedin-logo-black-png-image-21.png"></span><span><img src="https://th.bing.com/th/id/R.8eb68c7065e5057c9314f335d1bcb4a6?rik=jN4%2f3c2j9%2fNquA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2ftwitter-png-twitter-icon-1600.png&ehk=cfVuY5vaxmKssnSiLi2qsApgVuOQ2a3R0fEel7T0mJk%3d&risl=&pid=ImgRaw&r=0"></span><span><img src="https://icon-library.com/images/phone-icon-transparent/phone-icon-transparent-16.jpg">
+        </span></div>
+        <img id="img1" src='https://th.bing.com/th/id/OIP.SnLp3uyUFVC1hKeygkFaBwHaEK?rs=1&pid=ImgDetMain'>
+        </div>
+        <div id="navdiv"><span style="font-size: 36px;">RGUKT</span><span><img id="logo1" src="https://www.onlineresultportal.com/images/university/rajiv-gandhi-university-of-knowledge-technology_logo.jpg"></span>
+        </div>
+       </div></nav>
+       <div id="nuz">NUZVID</div>
+       <div id="spans">
+        <span><a href="question-01.html">Home</a></span>
+        <span><a href="#accredationt">Accrediation</a></span>
+        <span><a href="#about">About</a></span>
+        <span><a href="#academics"> Academics</a></span>
+        <span><a href="#curiculum">Curriculum</a></span>
+        <span><a href="#admissions">Admissions</a></span>
+        <span><a href="#facillities">Facillities</a></span>
+        <span><a href="#placements">Placements</a></span>
+       </div>
+    <div id="user">
+        <img style="width: 50px; height: 50px;"  src="https://www.tenforums.com/attachments/user-accounts-family-safety/322690d1615743307t-user-account-image-log-user.png">
+        <div id="user1">    
+        <select id="dropdown" onchange="location=this.value" style="border: none; width: 52px;">
+        <option value="loginpagee.html">Login</a></option>
+        <option>Register</option>
+        <option>Log-out</option>
+       </select>
+        </div>
+    <div id="nextt"><button style="font-size: 72px;font-family:monospace;">></button></div>
+       <div id="backk"><button style="font-size: 72px;font-family:monospace;" ><</button></div>
+       <div id="welcomee"> <h1>Welcome to</h1>
+        <h1 style="position: relative;right: 200px;">Rajiv Gandhi University of Knowledge Technology</h1>
+        <div style="width: 100px;border-bottom: 4px solid blue;"></div>
+        <p>imparting Quality Education...</p>
+       </div>
+      
+     <div id="imagess"> <h1 id="imagehead">About:</h1>
+        <div class="imgs">
+        <img src="https://rguktn.ac.in/assets_new/images/library.jpeg" >
+        
+        <h4>Central Library</h4>
+        <h5>Well equipped library with more than 20,000 books <br> and 10,000 periodicals.</h5>
+        </div>
+        <div class="imgs">
+        <img src="https://rguktn.ac.in/assets_new/images/infrastructure-resources.jpg" >
+        <h4>Facillities</h4>
+            <h5>Resources & Facilities
+
+                State of the art infrastructure added with pristine greenery make RGUKTN campus<br> idle for learning and continuous growth.</h5>
+            
+          
+        </div>
+        <div class="imgs">
+        <img src="https://rguktn.ac.in/assets_new/images/extra-curricular.jpg" >
+        <h4>Extra Cirricular Activities</h4>    
+        <h5>Extra curricular Activities
+
+            At RGUKTN, extra academic activities involving NCC, NSS Sports,<br> classical performing arts and yoga add to their personality building process</h5>
+       
+    </div>
+       <div class="imgs"><img src="https://rguktn.ac.in/assets_new/images/alumni.jpg" >
+        <h4>Alumni</h4> 
+       <h5>The Alumni of RGUKT Nuzvid are our global ambassadors.<br> Their accomplishment across various domains have brought the Institute global recognition.</h5>
+    </div>
+    <div id="tablee">
+       <table id="announcements">
+        <tr><th colspan="2" style="background-color: blue;">Announcements</th></tr>
+        <tr>
+        <th style="color: red;"> 06 JAN2024</th>
+<th>Circular to the above poverty line(Non Scholarship) students for the payment of college tuition fee of the academic year 2023-2024 and pending dues.»
+</th>  <tr><th style="color: red;">DEC2021</th>
+<th>Circular to students regarding FoodCourt»</th>
+</tr>
+<tr><th style="color: red;border-bottom: none;">27 MAR2024</th>
+<th style="border-bottom: none">for payment of Jagananna vidya deevena instalment for the period of June, July and August of the academic year 2023-2024.»  
+</th></tr>
+    </div>
+    <table id="news">
+        <tr><th  style="background-color:rgb(100, 100, 241);">News & Events</th></tr>
+ <tr><th>Astanga Yoga, Level 3 - Online International Workshop Events info » Registration Link »14-09-2023
+ </th></tr>
+ <tr><th>UGC NAD/ABC bureau has developed 04 videos regarding Academic Bank of Credits (ABC) program which have been approved by UGC. Video 1 » Video 2 » Video 3 » Video 4 »01-04-2023
+ </tr><th>Astanga Yoga Level 1 - Online International 10-Day Workshop Events info » Registration Link »21-05-2022
+ <tr><th>A TWO-DAY IN-HOUSE WORKSHOP ON “Electrical Power Systems” (Online mode) on 17th & 18th of Dec 2021 Events info »16-12-202
+   </th></tr> </div>
+   <div id="footerr">
+     <footer>
+    <p><img style="width: 16px;height: 16px;"src="https://th.bing.com/th/id/OIP.JgxAe1AphKwuA7_ah6o4dwHaHa?rs=1&pid=ImgDetMain">Ragiv Gandhi University of Knowledge and Technologies,Nuzvid.All rights reserved.</p>
+    <p>The Ragiv Gandhi University of Knowledge and Technologies has been constitued under AP Act No.18 of 2008</p>
+    <p>For more Details or Queries contact viswani donthu 
+        <img src="https://icon-library.com/images/phone-icon-transparent/phone-icon-transparent-16.jpg" style="width: 20px;height: 20px;">tel:8106166250</p>
+</footer>
+</div>
+    <script>
+        var count=0;
+      $(function(){
+        var imgs=["https://th.bing.com/th/id/OIP.SnLp3uyUFVC1hKeygkFaBwHaEK?rs=1&pid=ImgDetMain",
+              ,"https://rguktn.ac.in/assets_new/gallery/4.jpg","https://th.bing.com/th/id/OIP.CQB_wlCFKo74Ls8CryO6dwHaEK?w=261&h=180&c=7&r=0&o=5&pid=1.7","https://rguktn.ac.in/assets_new/images/library.jpeg","https://rguktn.ac.in/assets_new/gallery/4.jpg",
+"https://rguktn.ac.in/assets_new/gallery/19.jpg",
+"https://rguktn.ac.in/assets_new/gallery/20240126-75th_Republic_Day_4.jpg",
+"https://rguktn.ac.in/assets_new/gallery/20240216-Sitara_Musicalnight_16.jpg",
+"https://rguktn.ac.in/assets_new/gallery/20221226-mou-Valuecreed.jpg"];
+        $("#nextt").click(function(){
+        count=count+1;
+        $("#img1").attr("src",imgs[count]);
+        })
+        $("#backk").click(function(){
+            count=count-1;
+            $("#img1").attr("src",imgs[count]);
+        })
+      })
+    </script>
+</body>
+</html>

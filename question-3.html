@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+         span{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #imagess div p{
+            font-size: 25px;
+            color: rgb(228, 228, 13);
+        }
+        #div1{
+            background-color: rgb(231, 94, 45);
+            height: 100px;
+        }
+        #div1 img{
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            left:70px;
+            top:10px;
+            float: left;
+        }
+        #div1 #span1{
+            position: absolute;
+         left:180px;
+            top:30px;
+            color: whitesmoke;
+            font-size: 45px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }  
+        #div1 #span2{
+            position: absolute;
+         left:265px;
+            top:35px;
+            color: black;
+            font-size: 45px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        #div1 #span3{
+            position: absolute;
+         left:320px;
+            top:30px;
+            color: white;
+            font-size: 45px;
+        }
+       #search{
+        position: absolute;
+        right: 330px;
+        top:50px;
+       }
+       #searchh{
+        position: absolute;
+        right: 240px;
+        top:55px;
+       }
+       #user{
+        position: absolute;
+        right: 400px;
+        top:40px;
+        border-radius: 50%;
+       }
+       #dropdown{
+        position: absolute;
+        right: 400px;
+        top:90px;
+       }
+       .menu{
+    width: 15px;
+    border:2px solid black;
+    margin-bottom: 1px;
+   
+}
+#mainmenu{
+    position: absolute;
+    top:60px;
+    right:100px;
+}
+#menubar{
+    background-color: black;
+    opacity: 0.8;
+    color: rgb(231, 94, 45);
+    width: 200px;
+    position: absolute;
+    right: 0%;
+    top:75px;
+    height: 360px;
+}
+#menubar p{
+    border-bottom:  2px solid white;
+    font-size: 24px;
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+#mainimg{
+    width:100%;
+    height: 450px;
+}
+.img1{
+    z-index: 1;
+    width: 13px;
+    height: 13px;
+    border:2.5px solid black;
+border-radius: 50%;
+float: left;
+margin-right: 3px;
+
+}
+.circle{
+    position: absolute;
+    left:580px;
+    top:530px;
+}
+#imagess img{
+    width:250px;
+    height:250px;
+  
+    margin-left: 50px;
+    margin-top: 20px;
+    border: 5px solid white;
+    box-shadow: 0px 2px 4px 3px rgb(231, 94, 45);
+}
+#imagess div{
+    float: left;
+    text-align: center;
+}
+button{
+    z-index: 1;
+   border-radius: 10px;
+}
+.img1:hover{
+background-color: grey;
+color:blue
+}
+footer{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(231, 94, 45);
+    height: 100px;
+   
+}
+footer p{
+    position: relative;
+    top:30px;
+    font-size: 20px;
+
+    
+}
+#playnow:hover{
+    background-color: white;
+    opacity: 0.5;
+    color:rgb(231, 94, 45);
+}
+#playnow{
+    z-index: 1;
+    position: absolute;
+    top:50%;
+    left:10%;
+    background-color: rgb(231, 94, 45);
+    height: 40px;
+    width: 90px;
+    border-radius: 0px;
+    font-size: 20px;
+    color: white;
+    transform: skewX(-20deg);
+        display: inline-block;
+        line-height: 40px;
+}
+    </style>
+</head>
+<body style="background-color: rgb(243, 232, 232);color: white;background-color:  rgb(2, 2, 65)">
+    <nav>
+        <div id="div1">
+            <div><img src="https://th.bing.com/th/id/OIP.NFwNVldMLhNKbaNU1NDhAAHaEK?w=321&h=180&c=7&r=0&o=5&pid=1.7"></div>
+            <span id="span1">Kala</span><span id="span2">Tv</span><span id="span3">5</span>
+        </div>
+        <div>
+            <div id="search"><img onclick="fun1()" style="width: 20px;height: 20px; position: relative;top: 5px;" src="https://www.freeiconspng.com/uploads/search-icon-png-21.png"></div>
+            <img id="user" onclick="fun()" style="width: 60px; height: 50px;"  src="https://www.tenforums.com/attachments/user-accounts-family-safety/322690d1615743307t-user-account-image-log-user.png">
+        </div>
+         <div id="mainmenu" onclick="fun2()">
+            <div class="menu"></div>
+            <div class="menu"></div>
+            <div class="menu"></div>
+         </div>
+    </nav>
+    <input id="searchh"  style="width: 80px;height: 30px; display: none;"type="text" placeholder="search here">
+    <select id="dropdown" style="display: none;">
+        <option><a href=" "> Login</a></option>
+        <option><a href=" "> Sign-in </a></option>
+       </select>
+       <div id="menubar"style="display:none"><p>Home</p><p>Movies</p><p>TV</p><p>Sports</p><p>Webseries</p></div>
+        <div><img id="mainimg" src="https://fancyodds.com/wp-content/uploads/2022/01/Ipl-Wallpaper-3-e1641279556700.jpg"></div>
+ <div class="circle">    
+<div id="one"class="img1"></div>
+<div id="two"class="img1"></div>
+<div id="three"class="img1"></div>
+<div id="four"class="img1"></div>
+<div id="five"class="img1"></div>
+<div id="six"class="img1"></div>
+</div>
+<div id="imagess">
+    <h1>Popular Movies</h1>
+    <div >
+    <img class="imgs" src="https://th.bing.com/th?id=OIP.DESn91-nQgyoGFFs07RKTwAAAA&w=333&h=187&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+    <br>
+    <span>DJ-Tillu</span>
+    <p>IMBDb <span >7.2/10 </span></p>
+   
+</div>
+    <div>
+        <img class="imgs" src="https://assets.eenadu.net/article_img/2704Tigers001.jpg">
+        <br>
+        <span>Save The Tigers</span>
+    <p>IMBDb  <span >8.1 /10 </span></p>
+    
+    </div>
+    <div>
+        <img class="imgs"src="https://moviegalleri.net/wp-content/uploads/2022/04/Kalyan-Krishna-Presents-Producer-GK-Mohan-Of-Concept-Films-Movie-Titled-Lambasingi.jpg">
+       <br> <span>Lambasingi</span>
+       <p>IMDb  <span >6.3/10</span></p>
+       
+    </div>
+    <div>
+        <img class="imgs"src="https://img1.hotstarext.com/image/upload/f_auto,t_hcdl/sources/r1/cms/prod/7720/847720-h">
+    <br><span>OZLER</span><p>IMDb  <span >6.6/10</span></p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1>Popular Tv Shows</h1>
+    <div>
+        <img class="imgs"src="https://wallpapercave.com/wp/wp5533262.jpg">
+    </div>
+    <div>
+        <img class="imgs" src="https://wallpapercave.com/wp/wp1812486.jpg">
+    </div>
+    <div>
+        <img class="imgs"src="https://th.bing.com/th/id/OIP.QW6stmmiWzt6NFx1cpeUXAHaJQ?w=146&h=183&c=7&r=0&o=5&pid=1.7">
+    </div>
+    <div>
+        <img class="imgs"src="https://m.media-amazon.com/images/M/MV5BOGYzNzQ3ZDAtZDQxYS00NjZjLWExOGItZDZiM2YwODZjZDMwXkEyXkFqcGdeQXVyNzM4MjU3NzY@._V1_FMjpg_UX1000_.jpg">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1>Popular Reality Shows</h1>
+    <div>
+        <img class="imgs"src="https://th.bing.com/th/id/OIP.PpwIANtrgkD2KLjPHVuZAwHaEK?w=315&h=180&c=7&r=0&o=5&pid=1.7">
+    </div>
+    <div>
+        <img class="imgs"src="https://th.bing.com/th/id/OIP.-XfAphcSC9MaT6o9Aqj07gHaEe?w=292&h=180&c=7&r=0&o=5&pid=1.7">
+    </div>
+    <div>
+        <img class="imgs"src="https://www.dekhnews.com/entertainment/wp-content/uploads/2021/01/Indian-Idol-12-23rd-January-2021-Written-Updates-571x300.jpg">
+    </div>
+    <div>
+        <img class="imgs"src="https://th.bing.com/th/id/OIP.nU2edkXcKeDTbseHApKWwAHaEK?rs=1&pid=ImgDetMain">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1>Sports</h1>
+    <div>
+        <img class="imgs"src="https://th.bing.com/th/id/OIP.xd84FJ-XVltd1h1fXlgRTAAAAA?rs=1&pid=ImgDetMain">
+    </div>
+    <div>
+        <img class="imgs"src="https://th.bing.com/th/id/R.d3089e62153b77abcf732d909f15d998?rik=4K0fzlFo%2fAkEIA&riu=http%3a%2f%2fbsehexam.org%2fwp-content%2fuploads%2f2023%2f06%2fRCB-IPL-2024.png&ehk=%2fmnD%2fDR7yK5CoKvyMvbh%2fUT%2fpxDQV1oAAEaH93g5JtA%3d&risl=&pid=ImgRaw&r=0">
+    </div>
+    <div>
+        <img class="imgs" src="https://th.bing.com/th/id/OIP.XxWIYjc9nRlxjCpD7YiOEgHaFj?w=206&h=180&c=7&r=0&o=5&pid=1.7">
+    </div>
+   
+    
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    <p>Viswani Donthu &copy; 2024. All rights reserved.</p>
+    <p>Associates: KalaTv5, DEF Ltd.</p>
+</footer>
+<button id="playnow">playnow</button>
+<button style="color:white;font-size: 16px;  border-radius: 10px;background-color:rgb(35, 35, 126);position: absolute;top:40px;left:380px">Buy Plan<span><img style="width:40px;height:40px;" src="https://clipartcraft.com/images/transparent-crown-white-2.png"></span></button>
+<img src="https://th.bing.com/th/id/R.9252bfbdbf7d07f8962837fa9443fcdc?rik=crkF8YPomVLOvw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-double-arrows-double-angle-arrow-pointing-to-right-free-icon-512.png&ehk=YQ8ZgfQOlkUAhylme8lI4bxzl8HMNVwrHmk85RNu3Tc%3d&risl=&pid=ImgRaw&r=0" style="height: 40px;width: 40px;position: absolute;top:50%;left:90px">
+<script>
+$(function(){
+    var imgs=["https://fancyodds.com/wp-content/uploads/2022/01/Ipl-Wallpaper-3-e1641279556700.jpg","https://wallpapercave.com/wp/wp6388056.jpg","https://th.bing.com/th/id/OIP.h3r6fg-L4CKkauEyfjos5AHaEK?rs=1&pid=ImgDetMain","https://i.ytimg.com/vi/95efTsmRdZM/maxresdefault.jpg","https://th.bing.com/th/id/OIP.r_fG_1lNrppJZXa3-0CgIQHaEK?w=275&h=180&c=7&r=0&o=5&pid=1.7"]
+    $("#mainmenu").click(function(){
+            $("#menubar").toggle(1000);
+    });
+    $("#search").click(function(){
+        $("#searchh").toggle(200);
+    })
+    $("#user").click(function(){
+        $("#dropdown").toggle(200);
+    })
+    $(".imgs").hover(
+        function() {
+            var button = $("<button class='button'>Watch now</button>");
+            // Set a fixed size for the button to avoid layout changes
+            button.css({width: "100px",background:"blue", height: "40px"});
+            button.css({position: "absolute", top: $(this).position().top + ($(this).height() - button.height()) / 2, left: $(this).position().left + ($(this).width()) / 2});
+            $(this).after(button);
+            button.fadeIn();
+            
+        },
+        function() {
+            $(".button").fadeOut(function() {
+                $(this).remove();
+            });
+        }
+    )
+    $("#one").hover(function(){
+        $("#mainimg").attr("src",imgs[0]);
+    })
+    $("#two").hover(function(){
+        $("#mainimg").attr("src",imgs[1]);
+    })
+    $("#three").hover(function(){
+        $("#mainimg").attr("src",imgs[2]);
+    })
+    $("#four").hover(function(){
+        $("#mainimg").attr("src",imgs[3]);
+    })
+    $("#five").hover(function(){
+        $("#mainimg").attr("src",imgs[4]);
+    })
+    $("#six").hover(function(){
+        $("#mainimg").attr("src",imgs[5]);
+    })
+   
+  
+   
+
+});
+
+
+</script>
+   
+</body>
+</html>
