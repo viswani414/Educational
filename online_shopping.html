@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom styles */
+        a{
+            text-decoration:none;
+        }
+        .navbar-brand img {
+            margin-right: 10px;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .twohead{
+            background-color: blueviolet;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .showcase{
+            width: 100%;
+            background-image: url("onlineshopping.jpg");
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+            height: 400px;
+        }
+        .showcase .container{
+            width: 45%;
+             float: left; 
+             margin-top: 120px;
+         }
+        @media only screen and (max-width:950px)
+        {
+            .showcase{
+                height: 400px;
+            }
+            .showcase .container{
+                width: 100%;
+            }
+            .twohead{
+                display: block;
+                padding-right: 100px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+        .card:hover{
+            background-color: rgb(130, 130, 245);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid bg-primary  navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="flipkartLogo.png" alt="chandu" width="65" height="70" class="d-inline-block align-text-center">
+                <span class="fs-5">MiniFlipKart</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+                <input type="text" class="search-bar form-control" placeholder="Search Products,Brands and More....">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="twohead bg-primary">
+        <select class="form-select ms-5 me-5 mt-3 mb-3" aria-label="Default select example">
+            <option selected>Select Category</option>
+            <option >Men's</option>
+            <option >Women's</option>
+            <option >children</option>
+            <option >Trousers</option>
+            <option >Kurtas</option>
+          </select>
+          <div class="input-group ms-5 me-5 mt-3 mb-3">
+            <input type="text" class="form-control" placeholder="Apply Coupon Code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text btn" style="background-color: yellow; cursor: pointer;">Apply</span>
+          </div>
+    </div>
+    <div class="container-fluid showcase pt-5 ps-5">
+        <div class="container mt-5">
+            <div class="h2">Welcome to MiniFlipkart</div>
+            <div class="h3 text-danger">Shop with Exclusive Offers</div>
+            <p>Browse through our extensive categories including electronics, fashion, home essentials, beauty products, and more. With trusted brands and quality assurance, you can shop with confidence knowing that every purchase meets our high standards.</p>
+            <div class="btn btn-dark">shop Now</div>
+        </div>
+</div>
+<div class="container">
+<div class="row gap-5 justify-content-around mt-5">
+<div class="card col-md-5" style="width: 18rem;">
+    <img src="watch.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Ulyse Narydon</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="Bag.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Luggage Bag</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="Earpods.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Earpods</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="laptop.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Laptop</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="blackshirt.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Black shirt</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="sneakers.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Sneakers</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="camera.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Nikon Camera</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="trousers.jpg" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">Trousers</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star"></i>&nbsp;<i class="bi bi-star"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  <div class="card col-md-5" style="width: 18rem;">
+    <img src="sunglasses.webp" class="card-img-top" alt="..." width="200px" height="200px">
+    <div class="card-body">
+      <h5 class="card-title">SunGlasses</h5>
+      <p class="card-text">The watch is attached to the wrist by a strap or bracelet, which can be made from various materials.</p>
+      <i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill">&nbsp;</i><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star"></i>&nbsp;<i class="bi bi-star"></i><br><br>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="footer mt-5">
+    <div class="container-fluid bg-primary text-white ">
+        <div class="container">
+      <div class="row text-center gap-3">
+        <div class="col-md-4 text-start">
+          <div class="h4">MiniFlipKart:</div>
+          <div class="p">
+            
+            MiniFlipkart revolutionizes the e-commerce landscape with its user-friendly interface, extensive product catalog, and commitment to affordability and reliability. Boasting a diverse selection of products across categories like electronics, fashion.
+             
+    
+          </div>
+        </div>
+        <div class="col-md-3 text-start">
+          <div class="h4">
+            Social sites:
+          </div>
+          <ul>
+            <li><a href="#" class="text-white">Instagram</a></li>
+            <li><a href="#" class="text-white">Linkedin</a></li>
+            <li><a href="#" class="text-white">Facebook</a></li>
+            <li><a href="#" class="text-white">Youtube</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 text-start">
+        <div class="h4">
+            Hierarchy:
+          </div>
+          <ul>
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">Account</a></li>
+            <li><a href="#" class="text-white">Orders</a></li>
+            <li><a href="#" class="text-white">Cart</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 text-start">
+        <div class="h4">
+            Visitors:
+          </div>
+          <a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=1hrc5ytq7fae9jjbaxzdb68ldzh7bz41" border="0" title="free hit counter" alt="free hit counter"></a>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col text-center ">
+                MiniFlipKart &copy;2024
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
