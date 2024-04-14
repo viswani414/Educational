@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTT Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .twohead{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            
+            color: orangered;
+        }
+        .slideshow{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont{
+            position: relative;
+            width: 300px;
+            height: 400px;
+        }
+        .cont img{
+            position: absolute;
+            top: 0px;
+            bottom: opx;
+        }
+        .cont .btn{
+            position: absolute;
+            bottom: 0px;
+            left: 0%;
+            right: 0px;
+        }
+        .head{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-md-5:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid bg-dark  navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid ms-5">
+            <a class="navbar-brand" href="#">
+                <img src="aha.png" alt="chandu" width="165" height="80" class="d-inline-block align-text-center">
+            </a>
+        </div>
+            <div class="input-group ms-5 me-5 mt-3 mb-3">
+                <input type="text" class="form-control" placeholder="Search Movies,Serials,webseries..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text btn" style="background-color: orangered; cursor: pointer;">Search</span>
+              </div>
+    </header>
+    <div class="container-fluid bg-dark border border-top-danger">
+    <div class="twohead">
+        <div > <span style="color: orangered;">Home</span></div>
+        <div >
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span style="color: white;">Category</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">TV</a></li>
+                <li><a class="dropdown-item" href="#">Movies</a></li>
+                <li><a class="dropdown-item" href="#">Sports</a></li>
+                <li><a class="dropdown-item" href="#">Web Series</a></li>
+            </ul>
+        </div>
+        <div><a href="#">Latest</a></div>
+        <div ><a href="#">More</a></div>
+    </div>
+</div>
+<div class="slideshow container-fluid mt-5">
+    <img class="img-container border border-dark" name="n">
+</div>
+<div class="h3 head mt-5">Top rated shows</div>
+<div class="container">
+    <div class="row gap-5 justify-content-around mt-5">
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l1.avif" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l2.avif" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l3.avif" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l4.avif" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l5.jpg" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l6.jpg" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l7.avif" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l8.cms" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l9.jpg" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l10.jpg" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l11.jpg" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    <div class="col-md-5" style="width: 18rem;">
+        <div class="cont">
+            <img src="l12.webp" width="300px" height="400px">
+            <div class="btn btn-danger"> Watch Now</div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container-fluid bg-dark mt-5 text-white ">
+        <div class="container">
+      <div class="row text-center gap-3">
+        <div class="col-md-4 text-start">
+          <div class="h4 text-danger">Aha 2.O:</div>
+          <div class="p">
+            
+            Aha 2.0 is the revamped version of the popular OTT (Over-The-Top) platform Aha, offering a rich assortment of entertainment content. With a sleek interface and enhanced features, Aha 2.0 provides users with seamless access to a diverse range of movies, web series, and original shows across various genres including drama, comedy, romance, and thrillers.
+    
+          </div>
+        </div>
+        <div class="col-md-3 text-start">
+          <div class="h4 text-danger">
+            Contact us:
+          </div>
+          <ul>
+            <li><a href="#" class="text-white">Instagram</a></li>
+            <li><a href="#" class="text-white">Linkedin</a></li>
+            <li><a href="#" class="text-white">Facebook</a></li>
+            <li><a href="#" class="text-white">Youtube</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 text-start">
+        <div class="h4 text-danger">
+            Hierarchy:
+          </div>
+          <ul>
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="registration.php" class="text-white">TV</a></li>
+            <li><a href="login.php" class="text-white">Movies</a></li>
+            <li><a href="forgot.php" class="text-white">Sports</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 text-start">
+        <div class="h4 text-danger">
+            Visitors:
+          </div>
+          <a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=1hrc5ytq7fae9jjbaxzdb68ldzh7bz41" border="0" title="free hit counter" alt="free hit counter"></a>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col text-center text-danger small">
+                Aha2.O &copy; 2024
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var i=0;
+    var images=[];
+    var time=2000;
+    images[0]="m6.jpg";
+    images[1]="m5.jpg";
+    images[2]="m4.jpg";
+    images[3]="m3.jpg";
+    images[4]="m2.jpg";
+    images[5]="m1.jpg";
+    function changeImg()
+    {
+        document.n.src=images[i];
+        if(i<images.length-1)
+        {
+            i++;
+        }
+        else
+        {
+            i=0;
+        }
+        setTimeout("changeImg()",time);
+    }
+    window.onload=changeImg;
+</script>
+</body>
+</html>
