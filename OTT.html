@@ -28,11 +28,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .slideshow:hover {
+            transform: scale(1.05); 
         }
         .cont{
             position: relative;
             width: 300px;
             height: 400px;
+            overflow: hidden; 
+            border: 5px solid orangered; 
+            border-radius: 40px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .cont img{
             position: absolute;
@@ -53,13 +61,73 @@
         .col-md-5:hover{
             cursor: pointer;
         }
+        .col-md-5 {
+    overflow: hidden;
+    position: relative;
+}
+
+.col-md-5:hover .cont {
+    transform: translateY(-10px);
+}
+
+.cont {
+    transition: transform 0.3s ease;
+}
+.cont img {
+    transition: opacity 0.3s ease; 
+}
+.cont .btn {
+    opacity: 0; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.cont .btn i {
+    font-size: 2em; 
+    margin-right: 5px; 
+}
+
+.col-md-5:hover .cont .btn {
+    opacity: 1; 
+}
+.cont .btn:hover{
+    background-color: orange;
+}
+@keyframes slideUpDown {
+    0%, 100% {
+        transform: translateY(-10%);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+}
+
+.header-logo {
+    animation: slideUpDown 1s infinite alternate; 
+}
+.twohead > div {
+    transition: transform 0.3s ease; 
+}
+
+.twohead > div:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    font-color:orangered; 
+}
     </style>
 </head>
 <body>
     <header class="container-fluid bg-dark  navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid ms-5">
             <a class="navbar-brand" href="#">
-                <img src="aha.png" alt="chandu" width="165" height="80" class="d-inline-block align-text-center">
+                <img src="aha.png" alt="chandu" width="165" height="80" class="d-inline-block align-text-center header-logo">
             </a>
         </div>
             <div class="input-group ms-5 me-5 mt-3 mb-3">
@@ -69,10 +137,10 @@
     </header>
     <div class="container-fluid bg-dark border border-top-danger">
     <div class="twohead">
-        <div > <span style="color: orangered;">Home</span></div>
+        <div > <span style="color: orangered; font-size: 20px;">Home</span></div>
         <div >
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span style="color: white;">Category</span>
+                <span style="color: white; font-size: 20px;">Category</span>
             </a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">TV</a></li>
@@ -81,8 +149,8 @@
                 <li><a class="dropdown-item" href="#">Web Series</a></li>
             </ul>
         </div>
-        <div><a href="#">Latest</a></div>
-        <div ><a href="#">More</a></div>
+        <div style="font-size: 20px;">Latest</div>
+        <div style="font-size: 20px;">More</div>
     </div>
 </div>
 <div class="slideshow container-fluid mt-5">
@@ -94,73 +162,73 @@
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l1.avif" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l2.avif" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l3.avif" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l4.avif" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l5.jpg" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l6.jpg" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l7.avif" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l8.cms" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l9.jpg" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l10.jpg" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l11.jpg" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     <div class="col-md-5" style="width: 18rem;">
         <div class="cont">
             <img src="l12.webp" width="300px" height="400px">
-            <div class="btn btn-danger"> Watch Now</div>
+            <div class="btn btn-danger" style="background-color: orangered;"> <i class="bi bi-play-circle-fill"></i></div>
         </div>
     </div>
     </div>
