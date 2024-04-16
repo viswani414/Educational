@@ -9,8 +9,9 @@
     <style>
         header {
             min-height: 100px;
-            position:fixed;
+            position: fixed;
             top: 0px;
+            z-index: 1000; /* Ensure logo appears above other content */
         }
         body{
             background-color: black;
@@ -23,6 +24,15 @@
             position: absolute;
             top: 20px;
             color: white;
+            animation-play-state: running; /* Ensure marquee animation is running by default */
+            
+        }
+        marquee:hover{
+            cursor: pointer;
+            text-decoration: blue underline;
+        }
+        marquee:hover {
+            animation-play-state: paused; /* Pause marquee animation on hover */
         }
         .slideshow{
             position: absolute;
@@ -81,14 +91,54 @@
             width:2050px;
             
         }
+        .navbar-brand img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Occupy entire viewport width */
+            height: 100vh; /* Occupy entire viewport height */
+            transition: all 1s ease; /* Smooth transition */
+        }
+
+        .navbar-brand img.small {
+            width: 65px; /* Original width */
+            height: 70px; /* Original height */
+            top: 10px; /* Adjust to your desired position */
+            left: 10px; /* Adjust to your desired position */
+        }
+        .navbar-nav .nav-item {
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.navbar-nav .nav-item:hover {
+    transform: translateY(-5px); /* Move items 5px down on hover */
+    font-size: large;
+}
+.announcements, .announcements1 {
+    overflow: hidden; /* Hide the overflow to prevent content from overflowing */
+}
+
+.announcements .p, .announcements1 .p {
+    animation: slideRight 3s forwards; /* Apply the slideRight animation to the paragraphs */
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%); /* Start position: fully shifted to the left */
+    }
+    to {
+        transform: translateX(0%); /* End position: fully visible */
+    }
+}
+
     </style>
 </head>
 <body class="bg-dark">
     <header class="container-fluid bg-primary border border-danger navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f-5">RGUKT Nuzvid</span>
                 <img src="logo.png" alt="chandu" width="65" height="70" class="d-inline-block align-text-center">
-                <span class="f-5">RGUKT Nuzvid</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -134,7 +184,7 @@
         </div>
     </header>
     <div class="container-fluid content border border-primary">
-        <marquee><span style="color: red;">*New:</span> E2 Sem-2 results are out!!!</marquee>
+        <marquee onmouseOver="this.stop()" onMouseOut="this.start()"> <span style="color: red;">*New:</span> E2 Sem-2 results are out!!!</marquee>
         <div class="slideshow container-fluid">
             <img class="img-container border border-danger" name="n">
         </div>
@@ -201,7 +251,7 @@
             </div>
             <div class="col-md-3 text-start">
               <div class="h4">
-                Social sites:
+                Contact us:
               </div>
               <ul>
                 <li><a href="#" class="text-white">Instagram</a></li>
@@ -237,29 +287,16 @@
     </div>
     </div>
     <script>
-        var i=0;
-        var images=[];
-        var time=3600;
-        images[0]="https://rguktn.ac.in/assets_new/gallery/a.jpg";
-        images[1]="https://rguktn.ac.in/assets_new/gallery/20240126-75th_Republic_Day_4.jpg";
-        images[2]="https://rguktn.ac.in/assets_new/gallery/20240126-75th_Republic_Day_8.jpg";
-        images[3]="https://rguktn.ac.in/assets_new/gallery/20240112_PA_folksong.jpg";
-        images[4]="https://rguktn.ac.in/assets_new/gallery/20221226-mou-Strawhat.jpg";
-        images[5]="https://rguktn.ac.in/assets_new/gallery/20221226-mou-Strawhat2.jpg";
-        function changeImg()
-        {
-            document.n.src=images[i];
-            if(i<images.length-1)
-            {
-                i++;
-            }
-            else
-            {
-                i=0;
-            }
-            setTimeout("changeImg()",time);
+        // Function to transition the logo to its smaller width after page load
+        function transitionLogo() {
+            var logo = document.querySelector('.navbar-brand img');
+            setTimeout(function() {
+                logo.classList.add('small');
+            }, 1000); // Adjust delay as needed (1s delay in this example)
         }
-        window.onload=changeImg;
+        
+        // Call transitionLogo function when the window loads
+        window.onload = transitionLogo;
     </script>
 </body>
 </html>
